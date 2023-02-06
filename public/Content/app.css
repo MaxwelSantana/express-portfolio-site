@@ -1,5 +1,12 @@
 /* Custom css goes here */
-/* body {
-  display: grid;
-  place-items: center;
-} */
+
+/* Logo styles*/
+.logo {
+  width: 64px;
+  height: 64px;
+}
+
+i {
+  margin-left: 5px;
+  margin-right: 5px;
+}
