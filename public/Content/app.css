@@ -10,3 +10,8 @@ i {
   margin-left: 5px;
   margin-right: 5px;
 }
+
+/* Alignment about me icons */
+.about-me-icon {
+  margin-bottom: 1rem;
+}
