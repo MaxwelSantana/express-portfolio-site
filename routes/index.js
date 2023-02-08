@@ -8,15 +8,15 @@ router.get('/', function (req, res, next) {
 
 /* GET home page. */
 /**
- * 
+ *
  */
 router.get('/about', function (req, res, next) {
   res.render('about', { title: 'About' });
 });
 
 /* GET home page. */
-router.get('/products', function (req, res, next) {
-  res.render('products', { title: 'Products' });
+router.get('/projects', function (req, res, next) {
+  res.render('projects', { title: 'Projects' });
 });
 
 /* GET home page. */

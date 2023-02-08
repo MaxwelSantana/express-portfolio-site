@@ -15,3 +15,13 @@ i {
 .about-me-icon {
   margin-bottom: 1rem;
 }
+
+/* Add extra margin bottom to be higher than footer*/
+.container {
+  margin-bottom: 100px;
+}
+
+/* Fix card height */
+.card {
+  height: 100% !important;
+}
