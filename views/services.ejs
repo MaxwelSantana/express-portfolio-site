@@ -2,11 +2,96 @@
 <!-- Main Nav Navigation -->
 
 <main class="container">
-  <div class="jumbotron">
-    <h1 class="display-4">Services Page</h1>
+  <div
+    class="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light"
+  >
+    <div class="mx-auto my-5">
+      <h1 class="fw-normal">These are my services</h1>
+    </div>
+
+    <!-- Card List of Service -->
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col">
+        <div class="card">
+          <figure class="figure">
+            <img
+              src="Assets/images/services/software_development.jpg"
+              class="card-img-top figure-img img-fluid rounded"
+              alt="Image of computers and smartphone"
+            />
+            <figcaption class="figure-caption">
+              Image by
+              <a
+                href="https://www.freepik.com/free-vector/desktop-smartphone-app-development_10276838.htm#query=software%20development&position=5&from_view=search&track=sph"
+                >Freepik</a
+              >
+            </figcaption>
+          </figure>
+          <div class="card-body">
+            <h5 class="card-title">Software Development</h5>
+            <p class="card-text">
+              Development of custom software applications for various platforms
+              and devices, including desktop, mobile, and web.
+            </p>
+            <a href="contact" class="btn btn-primary">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <figure class="figure">
+            <img
+              src="Assets/images/services/website_development.jpg"
+              class="card-img-top figure-img img-fluid rounded"
+              alt="Image of websites development"
+            />
+            <figcaption class="figure-caption">
+              Image by
+              <a
+                href="https://www.freepik.com/free-vector/flat-cms-concept-blue-shades_12067631.htm?query=software%20development#from_view=detail_alsolike#position=1&query=software%20development"
+                >Freepik</a
+              >
+            </figcaption>
+          </figure>
+          <div class="card-body">
+            <h5 class="card-title">Website Development</h5>
+            <p class="card-text">
+              Design and implementation of websites, including the front-end
+              (HTML, CSS, JavaScript) and back-end (server script, dbs
+              management).
+            </p>
+            <a href="contact" class="btn btn-primary">Contact</a>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card">
+          <figure class="figure">
+            <img
+              src="Assets/images/services/integration_services.jpg"
+              class="card-img-top figure-img img-fluid rounded"
+              alt="Image of api integrations"
+            />
+            <figcaption class="figure-caption">
+              Image by
+              <a
+                href="https://www.freepik.com/free-vector/flat-design-api-illustration_25001336.htm#query=api%20integration&position=15&from_view=search&track=sph"
+                >Freepik</a
+              >
+            </figcaption>
+          </figure>
+          <div class="card-body">
+            <h5 class="card-title">Integration Services</h5>
+            <p class="card-text">
+              Integration of different software systems and platforms to improve
+              overall efficiency and productivity.
+            </p>
+            <a href="contact" class="btn btn-primary">Contact</a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </main>
 
-<!-- <h1><%= title %></h1> -->
-<!-- <p>Welcome to <%= title %></p> -->
 <%-include partials/bottom_nav.ejs%> <%-include partials/footer.ejs%>
