@@ -26,6 +26,7 @@ router.get('/contact', function (req, res, next) {
   res.render('contact', { title: 'Contact' });
 });
 
+/* POST contact form */
 router.post('/contact', function (req, res, next) {
   const { firstname, lastname, email, message } = req.body;
   console.log('###################################');
