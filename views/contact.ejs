@@ -2,11 +2,84 @@
 <!-- Main Nav Navigation -->
 
 <main class="container">
-  <div class="jumbotron">
-    <h1 class="display-4">Contact Page</h1>
+  <div class="row p-3 p-md-5 m-md-3 bg-light">
+    <div class="card-group col-md-10 mx-auto">
+      <div class="card col-md-8">
+        <div class="card-body">
+          <h1 class="card-title">Get in touch</h1>
+          <form method="post">
+            <div class="row mb-3">
+              <div class="col">
+                <label for="firstname" class="form-label">First Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="firstname"
+                  name="firstname"
+                  placeholder="First name"
+                  aria-describedby="first name"
+                />
+              </div>
+              <div class="col">
+                <label for="lastname" class="form-label">Last Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="lastname"
+                  name="lastname"
+                  placeholder="Last name"
+                  aria-describedby="last name"
+                />
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email address</label>
+              <input
+                type="email"
+                placeholder="name@email.com"
+                class="form-control"
+                id="email"
+                name="email"
+                aria-describedby="email"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea
+                class="form-control"
+                id="message"
+                name="message"
+                placeholder="Write your message"
+                rows="3"
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send</button>
+          </form>
+        </div>
+      </div>
+      <div class="card col-md-4 bg-dark text-white">
+        <div class="card-body">
+          <h1 class="card-title mb-5">Contact us</h1>
+          <div class="row mb-3">
+            <span
+              ><i class="fa-solid fa-envelope"></i>maxwelsant96@icloud.com</span
+            >
+          </div>
+          <div class="row mb-3">
+            <span><i class="fa-solid fa-phone"></i>+1 647-937-9532</span>
+          </div>
+          <div class="row mb-3">
+            <a
+              class="link-light"
+              href="https://www.linkedin.com/in/maxwel-santana-27ab024b/"
+            >
+              <i class="fa-brands fa-linkedin"></i>Maxwel Santana
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </main>
 
-<!-- <h1><%= title %></h1> -->
-<!-- <p>Welcome to <%= title %></p> -->
 <%-include partials/bottom_nav.ejs%> <%-include partials/footer.ejs%>

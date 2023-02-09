@@ -7,9 +7,6 @@ router.get('/', function (req, res, next) {
 });
 
 /* GET home page. */
-/**
- *
- */
 router.get('/about', function (req, res, next) {
   res.render('about', { title: 'About' });
 });
@@ -27,6 +24,17 @@ router.get('/services', function (req, res, next) {
 /* GET home page. */
 router.get('/contact', function (req, res, next) {
   res.render('contact', { title: 'Contact' });
+});
+
+router.post('/contact', function (req, res, next) {
+  const { firstname, lastname, email, message } = req.body;
+  console.log('###################################');
+  console.log('First Name: ', firstname);
+  console.log('Last Name: ', lastname);
+  console.log('Email: ', email);
+  console.log('Message: ', message);
+  console.log('###################################');
+  res.render('index', { title: 'Home' });
 });
 
 module.exports = router;
