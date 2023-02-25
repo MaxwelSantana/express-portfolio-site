@@ -4,49 +4,40 @@ let passport = require('passport');
 let UserModel = require('../models/user');
 let User = UserModel.User;
 
-protectedRoute = (callbackFn) => {
-  return (req, res, next) => {
-    if (!req.user) {
-      return res.redirect('/login');
-    }
-    callbackFn(req, res, next);
-  };
-};
-
-module.exports.displayHomePage = protectedRoute((req, res, next) => {
+module.exports.displayHomePage = (req, res, next) => {
   res.render('index', {
     title: 'Home',
     displayName: req.user ? req.user.displayName : '',
   });
-});
+};
 
-module.exports.displayAboutPage = protectedRoute((req, res, next) => {
+module.exports.displayAboutPage = (req, res, next) => {
   res.render('about', {
     title: 'About',
     displayName: req.user ? req.user.displayName : '',
   });
-});
+};
 
-module.exports.displayProjectsPage = protectedRoute((req, res, next) => {
+module.exports.displayProjectsPage = (req, res, next) => {
   res.render('projects', {
     title: 'Projects',
     displayName: req.user ? req.user.displayName : '',
   });
-});
+};
 
-module.exports.displayServicesPage = protectedRoute((req, res, next) => {
+module.exports.displayServicesPage = (req, res, next) => {
   res.render('services', {
     title: 'Services',
     displayName: req.user ? req.user.displayName : '',
   });
-});
+};
 
-module.exports.displayContactPage = protectedRoute((req, res, next) => {
+module.exports.displayContactPage = (req, res, next) => {
   res.render('contact', {
     title: 'Contact',
     displayName: req.user ? req.user.displayName : '',
   });
-});
+};
 
 module.exports.displayLoginPage = (req, res, next) => {
   //check if the user is already logged in*/
@@ -77,7 +68,7 @@ module.exports.processLoginPage = (req, res, next) => {
       if (err) {
         return next(err);
       }
-      return res.redirect('/projects');
+      return res.redirect('/businessContactList');
     });
   })(req, res, next);
 };

@@ -24,6 +24,7 @@ mongoDB.once('open', () => {
 
 // express setup
 var indexRouter = require('../routes/index');
+var businessContactsRouter = require('../routes/businessContact');
 var app = express();
 
 // view engine setup
@@ -62,6 +63,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 app.use('/', indexRouter);
+app.use('/businessContactList', businessContactsRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
