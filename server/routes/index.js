@@ -1,67 +1,24 @@
 var express = require('express');
 var router = express.Router();
+var indexController = require('../controllers');
 
 /* GET home page. */
-router.get('/', function (req, res, next) {
-  res.render('index', { title: 'Home' });
-});
+router.get('/', indexController.displayHomePage);
 
-/* GET home page. */
-router.get('/about', function (req, res, next) {
-  res.render('about', { title: 'About' });
-});
+router.get('/home', indexController.displayHomePage);
 
-/* GET home page. */
-router.get('/projects', function (req, res, next) {
-  res.render('projects', { title: 'Projects' });
-});
+router.get('/about', indexController.displayAboutPage);
 
-/* GET home page. */
-router.get('/services', function (req, res, next) {
-  res.render('services', { title: 'Services' });
-});
+router.get('/projects', indexController.displayProjectsPage);
 
-/* GET home page. */
-router.get('/contact', function (req, res, next) {
-  res.render('contact', { title: 'Contact' });
-});
+router.get('/contact', indexController.displayContactPage);
 
-/* POST contact form */
-router.post('/contact', function (req, res, next) {
-  const { firstname, lastname, email, message } = req.body;
-  console.log('###################################');
-  console.log('First Name: ', firstname);
-  console.log('Last Name: ', lastname);
-  console.log('Email: ', email);
-  console.log('Message: ', message);
-  console.log('###################################');
-  res.render('index', { title: 'Home' });
-});
+router.get('/services', indexController.displayServicesPage);
 
-router.get('/login', function (req, res, next) {
-  //check if the user is already logged in*/
-  if (!req.user) {
-    res.render('auth/login', {
-      title: 'Login',
-      messages: [], //req.flash('loginMessage'),
-      displayName: req.user ? req.user.displayName : '',
-    });
-  } else {
-    return res.redirect('/');
-  }
-});
+/*GET Route for displaying the Login page*/
+router.get('/login', indexController.displayLoginPage);
 
-router.get('/register', function (req, res, next) {
-  //check if the user is not already logged in*/
-  if (!req.user) {
-    res.render('auth/register', {
-      title: 'Register',
-      messages: [], //req.flash('registerMessage'),
-      displayName: req.user ? req.user.displayName : '',
-    });
-  } else {
-    return res.redirect('/');
-  }
-});
+/*GET Route for register page*/
+router.get('/register', indexController.displayRegisterPage);
 
 module.exports = router;
