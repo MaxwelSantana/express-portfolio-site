@@ -38,4 +38,30 @@ router.post('/contact', function (req, res, next) {
   res.render('index', { title: 'Home' });
 });
 
+router.get('/login', function (req, res, next) {
+  //check if the user is already logged in*/
+  if (!req.user) {
+    res.render('auth/login', {
+      title: 'Login',
+      messages: [], //req.flash('loginMessage'),
+      displayName: req.user ? req.user.displayName : '',
+    });
+  } else {
+    return res.redirect('/');
+  }
+});
+
+router.get('/register', function (req, res, next) {
+  //check if the user is not already logged in*/
+  if (!req.user) {
+    res.render('auth/register', {
+      title: 'Register',
+      messages: [], //req.flash('registerMessage'),
+      displayName: req.user ? req.user.displayName : '',
+    });
+  } else {
+    return res.redirect('/');
+  }
+});
+
 module.exports = router;
