@@ -1,0 +1,4 @@
+{
+  "appService.defaultWebAppToDeploy": "/subscriptions/12d6be26-b9f4-4e75-b5ac-a6cdfb877576/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/maxwel-express-portfolio",
+  "appService.deploySubpath": "."
+}
