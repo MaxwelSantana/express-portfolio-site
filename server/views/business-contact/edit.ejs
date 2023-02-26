@@ -1,0 +1,57 @@
+<%-include ../partials/header.ejs%> <%-include ../partials/main_nav.ejs%>
+<!--Content for the Add Page-->
+<div class="container">
+  <div class="row">
+    <div class="offset-md-3 col-md-6">
+      <h1><%=title%></h1>
+      <form class="form" method="POST">
+        <div class="form group">
+          <label for="nameTextField">Name</label>
+          <input
+            type="text"
+            class="form control"
+            id="nameTextField"
+            placeholder="Enter the contact name"
+            name="name"
+            value="<%=businessContact.name%>"
+            required
+          />
+        </div>
+
+        <div class="form group">
+          <label for="authorTextField">Number</label>
+          <input
+            type="text"
+            class="form control"
+            id="contactNumberTextField"
+            placeholder="Enter the contact number"
+            name="contactNumber"
+            value="<%=businessContact.contactNumber%>"
+            required
+          />
+        </div>
+
+        <div class="form group">
+          <label for="descriptionTextArea">Email</label>
+          <input
+            type="email"
+            class="form control"
+            id="emailTextArea"
+            placeholder="Enter the contact email"
+            name="email"
+            value="<%=businessContact.email%>"
+            required
+          ></input>
+        </div>
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fa-edit"></i>submit
+        </button>
+        <a href="/bookList" class="btn btn-warning"
+          ><i class="fas fa-undo"></i>cancel</a
+        >
+      </form>
+    </div>
+  </div>
+</div>
+
+<%-include ../partials/bottom_nav.ejs%> <%-include ../partials/footer.ejs%>

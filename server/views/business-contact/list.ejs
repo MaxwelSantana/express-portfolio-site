@@ -6,8 +6,8 @@
     <div class="offset-md-1 col-md-10">
       <h1><%=title %></h1>
       <%if(typeof displayName =='string'&&displayName){%>
-      <a href="/BusinessContactList/add" class="btn btn-primary" role="button"
-        ><i class="fas fa-plus-circle"></i>Add a Book</a
+      <a href="/businessContactList/add" class="btn btn-primary" role="button"
+        ><i class="fas fa-plus-circle"></i>Add a Business Contact</a
       >
       <%}%>
       <br />
@@ -15,64 +15,55 @@
         <!--Header Row-->
         <tr>
           <%if(typeof displayName =='string'&&displayName){%>
-          <th class="text-center col-1">Name</th>
+          <th class="text-center col-1">Contact Name</th>
           <th class="text-center col-1">Contact Number</th>
           <th class="text-center col-1">Email Address</th>
 
           <th class="text-center col-1"></th>
           <th class="text-center col-1"></th>
           <%}else{%>
-          <th class="text-center col-1">Name</th>
+          <th class="text-center col-1">Contact Name</th>
           <th class="text-center col-1">Contact Number</th>
           <th class="text-center col-1">Email Address</th>
           <%}%>
         </tr>
-        <%for(let count = 0; count < BusinessContactList.length; count ++){%>
+        <%for(let count = 0; count < businessContactList.length; count ++){%>
         <tr>
           <%if(typeof displayName =='string'&&displayName){%>
           <td class="text-center col-2">
-            <%=BusinessContactList[count].name%>
+            <%=businessContactList[count].name%>
           </td>
           <td class="text-center col-2">
-            <%=BusinessContactList[count].author%>
+            <%=businessContactList[count].contactNumber%>
           </td>
           <td class="text-center col-1">
-            <%=BusinessContactList[count].published%>
-          </td>
-          <td class="col-6"><%=BusinessContactList[count].description%></td>
-          <td class="text-center col 1">
-            <%=BusinessContactList[count].price%>
+            <%=businessContactList[count].email%>
           </td>
 
           <td class="text-center col-1">
             <a
-              href="/BusinessContactList/edit/<%=BusinessContactList[count]._id%>"
+              href="/businessContactList/edit/<%=businessContactList[count]._id%>"
               class="btn btn-primary"
               ><i class="fas fa-pencil-alt"></i>Edit</a
             >
           </td>
           <td class="text-center col-1">
             <a
-              href="/BusinessContactList/delete/<%=BusinessContactList[count]._id%>"
+              href="/businessContactList/delete/<%=businessContactList[count]._id%>"
               class="btn btn-danger"
               ><i class="fas fa-trash-alt"></i>Delete</a
             >
           </td>
           <%}else{%>
           <td class="text-center col-2">
-            <%=BusinessContactList[count].name%>
+            <%=businessContactList[count].name%>
           </td>
           <td class="text-center col-2">
-            <%=BusinessContactList[count].author%>
+            <%=businessContactList[count].contactNumber%>
           </td>
           <td class="text-center col-1">
-            <%=BusinessContactList[count].published%>
+            <%=businessContactList[count].email%>
           </td>
-          <td class="col-6"><%=BusinessContactList[count].description%></td>
-          <td class="text-center col 1">
-            <%=BusinessContactList[count].price%>
-          </td>
-
           <%}%>
         </tr>
         <%}%>

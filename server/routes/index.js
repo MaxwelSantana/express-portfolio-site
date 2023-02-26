@@ -2,20 +2,20 @@ var express = require('express');
 var router = express.Router();
 var indexController = require('../controllers');
 
-const { protectedRoute } = require('../helper/authRouteHelper');
+const { requireAuth } = require('../helper/authRouteHelper');
 
 /* GET home page. */
-router.get('/', protectedRoute(indexController.displayHomePage));
+router.get('/', requireAuth, indexController.displayHomePage);
 
-router.get('/home', protectedRoute(indexController.displayHomePage));
+router.get('/home', requireAuth, indexController.displayHomePage);
 
-router.get('/about', protectedRoute(indexController.displayAboutPage));
+router.get('/about', requireAuth, indexController.displayAboutPage);
 
-router.get('/projects', protectedRoute(indexController.displayProjectsPage));
+router.get('/projects', requireAuth, indexController.displayProjectsPage);
 
-router.get('/contact', protectedRoute(indexController.displayContactPage));
+router.get('/contact', requireAuth, indexController.displayContactPage);
 
-router.get('/services', protectedRoute(indexController.displayServicesPage));
+router.get('/services', requireAuth, indexController.displayServicesPage);
 
 /*GET Route for displaying the Login page*/
 router.get('/login', indexController.displayLoginPage);
