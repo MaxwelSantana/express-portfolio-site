@@ -19,7 +19,7 @@ module.exports.displayBusinesContactList = (req, res, next) => {
         return 0;
       });
       res.render('business-contact/list', {
-        title: 'Business Contact',
+        title: 'Business Contact List',
         businessContactList: businessContactList,
         displayName: req.user ? req.user.displayName : '',
       });
