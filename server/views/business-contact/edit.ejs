@@ -41,12 +41,17 @@
             name="email"
             value="<%=businessContact.email%>"
             required
-          ></input>
+          />
         </div>
         <button class="btn btn-primary" type="submit">
           <i class="fas fa-edit"></i>submit
         </button>
-        <a href="/bookList" class="btn btn-warning"
+        <a
+          href="/businessContactList/delete/<%=businessContact._id%>"
+          class="btn btn-danger"
+          ><i class="fas fa-trash-alt"></i>Delete</a
+        >
+        <a href="/businessContactList" class="btn btn-warning"
           ><i class="fas fa-undo"></i>cancel</a
         >
       </form>
